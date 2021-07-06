@@ -34,7 +34,7 @@ class _ImageMessageState extends State<ImageMessage> {
   void initState() {
     super.initState();
     if (widget.message.uri.startsWith('http')) {
-      _image = Image.network(widget.message.uri);
+      _image = NetworkImage(widget.message.uri);
     } else {
       _image = FileImage(File(widget.message.uri));
     }
