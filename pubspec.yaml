@@ -12,7 +12,8 @@ dependencies:
     sdk: flutter
   flutter_chat_types:
     git: https://github.com/Vaibhavsaharan/flutter_chat_types-1.1.1.git
-  flutter_link_previewer: ^0.1.0
+  flutter_link_previewer:
+    git: https://github.com/Vaibhavsaharan/flutter_link_previewer-0.1.0.git
   intl: ^0.16.1
   photo_view: ^0.10.3
 
