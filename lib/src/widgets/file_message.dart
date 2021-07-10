@@ -16,19 +16,22 @@ class FileMessage extends StatelessWidget {
   final void Function(types.FileMessage) onPressed;
 
   Widget _userWidget(types.User user) {
-    return Text(
-      message.authorName,
-      style: TextStyle(
-        color: user.id == message.authorId
-            ? Colors.white70
-            : Colors.grey[500],
-        fontFamily: 'Avenir',
-        fontSize: 14,
-        fontWeight: FontWeight.w700,
-        height: 1.375,
-      ),
-      textWidthBasis: TextWidthBasis.longestLine,
-    );
+    return Padding(
+        padding: EdgeInsets.fromLTRB(0,0,0,8),
+        child: Text(
+        message.authorName,
+        style: TextStyle(
+          color: user.id == message.authorId
+              ? Colors.white70
+              : Colors.grey[500],
+          fontFamily: 'Avenir',
+          fontSize: 14,
+          fontWeight: FontWeight.w700,
+          height: 1.375,
+        ),
+        textWidthBasis: TextWidthBasis.longestLine,
+        )
+      );
   }
 
   @override
