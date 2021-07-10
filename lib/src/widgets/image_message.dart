@@ -201,16 +201,13 @@ class _ImageMessageState extends State<ImageMessage> {
                   image: _image,
                 ),
               ),
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 0.0, sigmaY: 0.0),
-                child: AspectRatio(
-                  aspectRatio: _size.aspectRatio > 0 ? _size.aspectRatio : 1,
-                  child: GestureDetector(
-                    onTap: () => widget.onPressed(widget.message.uri),
-                    child: Image(
-                      fit: BoxFit.contain,
-                      image: _image,
-                    ),
+              child: AspectRatio(
+                aspectRatio: _size.aspectRatio > 0 ? _size.aspectRatio : 1,
+                child: GestureDetector(
+                  onTap: () => widget.onPressed(widget.message.uri),
+                  child: Image(
+                    fit: BoxFit.contain,
+                    image: _image,
                   ),
                 ),
               ),
