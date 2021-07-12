@@ -34,9 +34,7 @@ class _ImageMessageState extends State<ImageMessage> {
   @override
   void initState() {
     super.initState();
-    print(widget.message.uri);
-    Conditional().getProvider(widget.message.uri);
-    print(widget.message.uri);
+    _image = Conditional().getProvider(widget.message.uri);
     _size = Size(widget.message.width ?? 0, widget.message.height ?? 0);
   }
 
